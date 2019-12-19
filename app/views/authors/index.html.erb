@@ -1,0 +1,21 @@
+<h1>All the Artists</h1>
+
+
+<table class="striped bordered">
+  <tr>
+    <th>Artist</th>
+    <th>Image</th>
+    <th>Albums</th>
+    <th>Hometown</th>
+  </tr>
+
+  <% @authors.each do |author| %>
+      <tr>
+        <td><%= link_to author.first_name, author_path(author) %></td>
+        <td><%= author.last_name %></td>
+        <td><%= author.genre %></td>
+        <td><%= author.birthdate %></td>
+      </tr>
+  <% end %>
+</table>
+
